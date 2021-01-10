@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Django Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <h1>{{titles}} Home</h1>
+    <h3>Menu</h3>
+    <a href="{{link}}" >Home</a>
+    <a href="register/signup">Signup</a>
+    <div>
+        <form action="expression" method="POST" >
+            {% csrf_token %}
+            1st Value: <input type='text' name='text1'><br/>
+            2nd Value: <input type='text' name='text2'><br/>
+            <input type="submit">
+
+        </form>
+    </div>
+    </body>
+</html>
